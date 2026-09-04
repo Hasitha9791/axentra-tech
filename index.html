@@ -125,7 +125,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="css/style.css?v=1.1.0" />
+  <link rel="stylesheet" href="css/style.css?v=3.7.1" />
 </head>
 <body>
 
@@ -159,18 +159,100 @@
       </a>
 
       <ul class="nav-links" id="nav-links" role="menubar">
-        <li role="none"><a href="#home" class="nav-link active" role="menuitem">Home</a></li>
-        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
-        <li role="none"><a href="#services" class="nav-link" role="menuitem">Services</a></li>
-        <li role="none"><a href="#process" class="nav-link" role="menuitem">Process</a></li>
-        <li role="none"><a href="#templates" class="nav-link" role="menuitem">Templates</a></li>
-        <li role="none"><a href="#portfolio" class="nav-link" role="menuitem">Portfolio</a></li>
-        <li role="none"><a href="#team" class="nav-link" role="menuitem">Team</a></li>
-        <li role="none"><a href="#careers" class="nav-link" role="menuitem">Careers</a></li>
-        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+        <li role="none">
+          <a href="#home" class="nav-link active" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-house"></i>
+              <span>Home</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#about" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-building"></i>
+              <span>About</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#services" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-layer-group"></i>
+              <span>Services</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#process" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-diagram-project"></i>
+              <span>Process</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#templates" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-laptop-code"></i>
+              <span>Templates</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#portfolio" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-cubes"></i>
+              <span>Portfolio</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#team" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-users"></i>
+              <span>Team</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#careers" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-briefcase"></i>
+              <span>Careers</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#contact" class="nav-link" role="menuitem">
+            <span class="nav-link-content">
+              <i class="fas fa-envelope"></i>
+              <span>Contact</span>
+            </span>
+            <i class="fas fa-chevron-right nav-link-arrow" aria-hidden="true"></i>
+          </a>
+        </li>
+
+        <!-- Mobile Drawer Quick Actions -->
+        <li class="mobile-menu-footer" role="none">
+          <a href="#contact" class="btn btn-primary mobile-cta-btn">
+            <i class="fas fa-paper-plane"></i> Get a Free Quote
+          </a>
+          <a href="https://wa.me/94771757556" target="_blank" rel="noopener noreferrer" class="btn btn-outline mobile-cta-btn" style="border-color: #25d366; color: #25d366;">
+            <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+          </a>
+        </li>
       </ul>
 
-      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote</a>
+      <a href="#contact" class="btn btn-primary nav-cta">Get a Quote <i class="fas fa-arrow-right"></i></a>
 
       <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
         <span></span><span></span><span></span>
@@ -180,64 +262,141 @@
 
   <main>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section id="home" class="hero" aria-label="Hero">
-      <div class="hero-bg">
-        <div class="hero-grid"></div>
-        <div class="hero-orb orb-1"></div>
-        <div class="hero-orb orb-2"></div>
-        <div class="hero-orb orb-3"></div>
-        <div class="particles" id="particles"></div>
-      </div>
+    <!-- ===== HERO SECTION (FULL-BLEED 7S ON-IMAGE SLIDESHOW) ===== -->
+    <section id="home" class="hero" aria-label="Hero" data-aos="fade">
+      <!-- 7-Second Global Progress Bar -->
+      <div class="hero-progress-bar" id="showcaseProgressBar" aria-hidden="true"></div>
 
-      <div class="container hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span>Empowering Business Growth</span>
-        </div>
-        <h1 class="hero-title">
-          We Build <span class="gradient-text">Custom Software</span><br />
-          That <span class="gradient-text">Powers Your Business</span>
-        </h1>
-        <p class="hero-subtitle">
-          Your technology partner for digital transformation. We engineer high-performance custom software, scalable web platforms, and mobile applications that optimize workflows and drive commercial growth.
-        </p>
+      <!-- Full-Bleed Background Slides Track -->
+      <div class="hero-slider-container" id="showcaseSlider" role="region" aria-roledescription="carousel" aria-label="Axentra Software Showcase">
 
-        <!-- Hero Service Highlights -->
-        <div class="hero-highlights">
-          <div class="highlight-card">
-            <div class="highlight-icon"><i class="fas fa-laptop-code"></i></div>
-            <div class="highlight-text">
-              <strong>Web &amp; Mobile Applications</strong>
-              <span>From MVPs to enterprise platforms — built to scale with your growth.</span>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="highlight-icon"><i class="fas fa-cogs"></i></div>
-            <div class="highlight-text">
-              <strong>Custom Software Solutions</strong>
-              <span>Tailored precisely to your business needs, workflows, and goals.</span>
+        <!-- Slide 1: Apex LendCore (Core Banking & 100% Full Code Sale) -->
+        <div class="hero-slide active" role="group" aria-roledescription="slide" aria-label="1 of 4: Apex LendCore Core Banking & Microfinance">
+          <div class="hero-slide-bg" style="background-image: url('assets/slide_core_banking.jpg');"></div>
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content-center">
+            <h1 class="hero-cinematic-title">
+              Apex LendCore<span class="trademark">™</span><br />
+              <span class="gradient-text">Core Banking Platform</span>
+            </h1>
+            <p class="hero-cinematic-desc">
+              CBSL-compliant core banking system with 100% full source code ownership. Zero recurring license fees, automated loan underwriting, and complete IP control.
+            </p>
+            <div class="hero-cinematic-actions">
+              <a href="#portfolio" class="btn btn-cinematic-primary">Explore Platform <i class="fas fa-arrow-right"></i></a>
+              <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20purchasing%20the%20Full%20Source%20Code%20for%20Apex%20LendCore." target="_blank" rel="noopener noreferrer" class="btn btn-cinematic-outline">Buy Full Source Code <i class="fas fa-arrow-right"></i></a>
             </div>
           </div>
         </div>
 
-        <div class="hero-actions">
-          <a href="#services" class="btn btn-primary btn-lg">
-            <span>Explore Our Services</span>
-            <i class="fas fa-arrow-right"></i>
-          </a>
-          <a href="#contact" class="btn btn-outline btn-lg">
-            <i class="fas fa-calendar"></i>
-            <span>Get a Free Consultation</span>
-          </a>
+        <!-- Slide 2: Apex LendMobile (Field Banking & Offline Sync) -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 of 4: Apex LendMobile Field Banking & Doorstep Lending">
+          <div class="hero-slide-bg" style="background-image: url('assets/slide_mobile_fintech.jpg');"></div>
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content-center">
+            <h1 class="hero-cinematic-title">
+              Apex LendMobile<span class="trademark">™</span><br />
+              <span class="gradient-text">Field Banking &amp; Doorstep App</span>
+            </h1>
+            <p class="hero-cinematic-desc">
+              High-performance field banking application with encrypted offline SQLite queue, GPS geo-fence audit tracking, and instant Bluetooth thermal receipt printing.
+            </p>
+            <div class="hero-cinematic-actions">
+              <a href="#portfolio" class="btn btn-cinematic-primary">View Mobile App <i class="fas fa-arrow-right"></i></a>
+              <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20Apex%20LendMobile." target="_blank" rel="noopener noreferrer" class="btn btn-cinematic-outline">Request App Demo <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
+
+        <!-- Slide 3: Custom Website Development & Sample Templates -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 of 4: Custom Website Development & Sample Templates">
+          <div class="hero-slide-bg" style="background-image: url('assets/slide_web_development.jpg');"></div>
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content-center">
+            <h1 class="hero-cinematic-title">
+              Custom Websites<br />
+              <span class="gradient-text">&amp; Ready Business Templates</span>
+            </h1>
+            <p class="hero-cinematic-desc">
+              High-converting, ultra-fast responsive websites engineered for your business with direct WhatsApp ordering and attached ready-to-launch templates.
+            </p>
+            <div class="hero-cinematic-actions">
+              <a href="#templates" class="btn btn-cinematic-primary">View Sample Templates <i class="fas fa-arrow-right"></i></a>
+              <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20Website%20Development%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-cinematic-outline">Chat on WhatsApp <i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 4: Ayu Health Suite (Cloud Clinic & EMR) -->
+        <div class="hero-slide" role="group" aria-roledescription="slide" aria-label="4 of 4: Ayu Health Suite Cloud Clinic & EMR">
+          <div class="hero-slide-bg" style="background-image: url('assets/slide_healthcare_emr.jpg');"></div>
+          <div class="hero-slide-overlay"></div>
+          <div class="hero-slide-content-center">
+            <h1 class="hero-cinematic-title">
+              Ayu Health Suite<span class="trademark">™</span><br />
+              <span class="gradient-text">Cloud Clinic &amp; EMR Platform</span>
+            </h1>
+            <p class="hero-cinematic-desc">
+              Smart clinical management system with digital prescriptions, drug interaction safety warnings, multi-doctor queue tokens, and automated WhatsApp reminders.
+            </p>
+            <div class="hero-cinematic-actions">
+              <a href="#portfolio" class="btn btn-cinematic-primary">Discover Ayu Health <i class="fas fa-arrow-right"></i></a>
+              <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20Ayu%20Health%20Suite." target="_blank" rel="noopener noreferrer" class="btn btn-cinematic-outline">Chat with Us <i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+
       </div>
 
-      <div class="hero-scroll">
-        <a href="#about" aria-label="Scroll to about section">
-          <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
-          <span>Scroll Down</span>
-        </a>
+      <!-- Bottom Interactive Navigation Bar (Tabs & 7s Progress Bars) -->
+      <div class="hero-bottom-nav-bar">
+        <div class="hero-nav-wrapper">
+          <!-- 4 Quick-Switch Tabs -->
+          <div class="hero-tabs-grid" role="tablist" aria-label="Software Capabilities">
+            <button class="showcase-tab-btn active" role="tab" aria-selected="true" data-index="0">
+              <span class="tab-icon"><i class="fas fa-university"></i></span>
+              <span class="tab-text">
+                <strong>Apex LendCore</strong>
+                <small>Core Banking • Full Code Sale</small>
+              </span>
+              <span class="tab-progress-line"></span>
+            </button>
+            <button class="showcase-tab-btn" role="tab" aria-selected="false" data-index="1">
+              <span class="tab-icon"><i class="fas fa-mobile-screen"></i></span>
+              <span class="tab-text">
+                <strong>Apex LendMobile</strong>
+                <small>Field Banking • Offline Sync</small>
+              </span>
+              <span class="tab-progress-line"></span>
+            </button>
+            <button class="showcase-tab-btn" role="tab" aria-selected="false" data-index="2">
+              <span class="tab-icon"><i class="fas fa-laptop-code"></i></span>
+              <span class="tab-text">
+                <strong>Web Development</strong>
+                <small>Custom &amp; Sample Templates</small>
+              </span>
+              <span class="tab-progress-line"></span>
+            </button>
+            <button class="showcase-tab-btn" role="tab" aria-selected="false" data-index="3">
+              <span class="tab-icon"><i class="fas fa-heart-pulse"></i></span>
+              <span class="tab-text">
+                <strong>Ayu Health Suite</strong>
+                <small>Cloud Clinic &amp; EMR</small>
+              </span>
+              <span class="tab-progress-line"></span>
+            </button>
+          </div>
+
+          <!-- Prev/Next Controls -->
+          <div class="hero-nav-arrow-group">
+            <button class="showcase-nav-btn" id="showcasePrev" aria-label="Previous Slide">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="showcase-nav-btn" id="showcaseNext" aria-label="Next Slide">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -599,244 +758,633 @@
     <section id="templates" class="section templates-section" aria-label="Website Templates">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-label">Ready-Made Templates</div>
-          <h2 class="section-title">Website <span class="gradient-text">Templates</span></h2>
-          <p class="section-subtitle">Browse our collection of professionally designed website templates. Pick one, we'll customise it for your business and get you online fast.</p>
+          <div class="section-label"><i class="fas fa-laptop-code"></i> Website Development &amp; Sample Templates</div>
+          <h2 class="section-title">Website Development &amp; <span class="gradient-text">Sample Templates</span></h2>
+          <p class="section-subtitle">We design and develop modern, lightning-fast, and mobile-responsive websites. Select from our attached sample templates below or let us craft a 100% custom website tailored to your business.</p>
         </div>
 
-        <div class="templates-grid" data-aos="fade-up">
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Bakery.jpg" data-title="Bakery Website">
-              <img src="assets/Bakery.jpg" alt="Bakery Website Template" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Bakery / Food</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Bakery Website</h3>
-              <p>A warm and inviting website template for bakeries, cafes, and food businesses — featuring a menu showcase, gallery, and contact section.</p>
+        <!-- Website Development Feature Highlights Strip -->
+        <div class="template-features-pill-row" data-aos="fade-up">
+          <div class="template-feature-pill">
+            <i class="fas fa-mobile-screen"></i>
+            <div>
+              <span>100% Mobile Responsive</span>
+              <small>Flawless on Phones, Tablets &amp; Desktops</small>
             </div>
           </div>
-
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Restaurant.jpg" data-title="Restaurant Website">
-              <img src="assets/Restaurant.jpg" alt="Restaurant Website Template" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Restaurant / Food</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Restaurant Website</h3>
-              <p>An elegant website template for restaurants — featuring a menu display, reservations, gallery, and location section.</p>
+          <div class="template-feature-pill">
+            <i class="fas fa-bolt"></i>
+            <div>
+              <span>Ultra Fast Loading</span>
+              <small>Optimized Code &amp; SEO-Ready Structure</small>
             </div>
           </div>
-
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Bakery & Restaurant.jpg" data-title="Bakery &amp; Restaurant Website">
-              <img src="assets/Bakery & Restaurant.jpg" alt="Bakery and Restaurant Website Template" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Bakery / Restaurant</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Bakery &amp; Restaurant Website</h3>
-              <p>A versatile template combining bakery and restaurant features — menu, specials, online ordering, and a warm visual style.</p>
+          <div class="template-feature-pill">
+            <i class="fab fa-whatsapp"></i>
+            <div>
+              <span>WhatsApp &amp; Forms</span>
+              <small>Direct Customer Leads to Your Phone</small>
             </div>
           </div>
-
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Bakery & Restaurant 2.jpg" data-title="Bakery &amp; Restaurant Website – Style 2">
-              <img src="assets/Bakery & Restaurant 2.jpg" alt="Bakery and Restaurant Website Template Style 2" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Bakery / Restaurant</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Bakery &amp; Restaurant – Style 2</h3>
-              <p>An alternative modern layout for bakery and restaurant businesses with a bold hero, featured items, and testimonials section.</p>
-            </div>
-          </div>
-
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Hair & Beauty Salon.jpg" data-title="Hair &amp; Beauty Salon Website">
-              <img src="assets/Hair & Beauty Salon.jpg" alt="Hair and Beauty Salon Website Template" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Salon / Beauty</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Hair &amp; Beauty Salon Website</h3>
-              <p>A stylish and elegant template for hair salons and beauty studios — services, pricing, team profiles, and online booking.</p>
-            </div>
-          </div>
-
-          <div class="template-card">
-            <div class="template-preview" data-lightbox="assets/Portfolio.jpg" data-title="Portfolio Website">
-              <img src="assets/Portfolio.jpg" alt="Portfolio Website Template" loading="lazy" />
-              <div class="template-overlay">
-                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
-              </div>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Portfolio / Personal</span>
-                <span class="template-badge">Available</span>
-              </div>
-              <h3>Portfolio Website</h3>
-              <p>A clean and professional portfolio template for creatives, freelancers, and professionals to showcase their work and skills.</p>
-            </div>
-          </div>
-
-          <!-- More templates coming soon -->
-          <div class="template-card template-card--coming">
-            <div class="template-preview template-preview--empty">
-              <i class="fas fa-plus"></i>
-              <span>More Coming Soon</span>
-            </div>
-            <div class="template-info">
-              <div class="template-meta">
-                <span class="template-category"><i class="fas fa-tag"></i> Various Industries</span>
-              </div>
-              <h3>More Templates</h3>
-              <p>We're adding new templates regularly. Contact us to request a template for your specific industry.</p>
+          <div class="template-feature-pill">
+            <i class="fas fa-palette"></i>
+            <div>
+              <span>Custom Brand Styling</span>
+              <small>Your Colors, Logos &amp; Content Customized</small>
             </div>
           </div>
         </div>
 
-        <div class="templates-cta" data-aos="fade-up">
-          <p>Need a custom design instead? <a href="#contact" class="inline-link">Tell us about your project <i class="fas fa-arrow-right"></i></a></p>
+        <div class="templates-grid" data-aos="fade-up">
+          <!-- Template 1: Bakery -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Bakery.jpg" data-title="Bakery Website Template">
+              <img src="assets/Bakery.jpg" alt="Bakery Website Template Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-bread-slice"></i> Bakery / Food</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Bakery Website Template</h3>
+              <p>Warm and inviting layout for bakeries, pastry shops, and cafes — featuring menu showcase, photo gallery, and order inquiry form.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Menu Catalog</span>
+                <span><i class="fab fa-whatsapp"></i> WhatsApp Order</span>
+                <span><i class="fas fa-mobile-alt"></i> Mobile Ready</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Bakery.jpg" data-title="Bakery Website Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Bakery%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 2: Restaurant -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Restaurant.jpg" data-title="Restaurant Website Template">
+              <img src="assets/Restaurant.jpg" alt="Restaurant Website Template Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-utensils"></i> Restaurant / Food</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Restaurant Website Template</h3>
+              <p>Elegant dining website with food menu categorization, table reservation requests, chef specials, and Google Maps integration.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Table Booking</span>
+                <span><i class="fas fa-book-open"></i> Food Menu</span>
+                <span><i class="fas fa-location-dot"></i> Maps Ready</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Restaurant.jpg" data-title="Restaurant Website Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Restaurant%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 3: Bakery & Restaurant -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Bakery & Restaurant.jpg" data-title="Bakery &amp; Restaurant Website Template">
+              <img src="assets/Bakery & Restaurant.jpg" alt="Bakery and Restaurant Website Template Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-mug-hot"></i> Bakery &amp; Cafe</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Bakery &amp; Restaurant Template</h3>
+              <p>Versatile template combining pastry retail and dine-in restaurant features — daily specials, quick ordering, and customer testimonials.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Online Ordering</span>
+                <span><i class="fas fa-tags"></i> Daily Specials</span>
+                <span><i class="fas fa-star"></i> Reviews</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Bakery & Restaurant.jpg" data-title="Bakery &amp; Restaurant Website Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Bakery%20and%20Restaurant%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 4: Bakery & Restaurant Style 2 -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Bakery & Restaurant 2.jpg" data-title="Bakery &amp; Restaurant – Style 2 Template">
+              <img src="assets/Bakery & Restaurant 2.jpg" alt="Bakery and Restaurant Template Style 2 Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-champagne-glasses"></i> Modern Bistro</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Bistro &amp; Lounge – Style 2</h3>
+              <p>Modern dark-aesthetic layout with high-impact hero visuals, featured culinary items, customer reviews, and fast contact triggers.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Modern UI/UX</span>
+                <span><i class="fas fa-camera"></i> Food Gallery</span>
+                <span><i class="fab fa-whatsapp"></i> Direct Chat</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Bakery & Restaurant 2.jpg" data-title="Bakery &amp; Restaurant – Style 2 Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Bistro%20and%20Lounge%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 5: Hair & Beauty Salon -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Hair & Beauty Salon.jpg" data-title="Hair &amp; Beauty Salon Website Template">
+              <img src="assets/Hair & Beauty Salon.jpg" alt="Hair and Beauty Salon Website Template Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-spa"></i> Salon &amp; Beauty</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Hair &amp; Beauty Salon Template</h3>
+              <p>Stylish, premium layout for salons, spas, and wellness studios — service pricing packages, team profiles, and online appointment booking.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Appointment Booking</span>
+                <span><i class="fas fa-list-check"></i> Service Pricing</span>
+                <span><i class="fas fa-user-tie"></i> Stylists</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Hair & Beauty Salon.jpg" data-title="Hair &amp; Beauty Salon Website Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Hair%20and%20Beauty%20Salon%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Template 6: Portfolio -->
+          <div class="template-card">
+            <div class="template-preview" data-lightbox="assets/Portfolio.jpg" data-title="Personal &amp; Agency Portfolio Website Template">
+              <img src="assets/Portfolio.jpg" alt="Portfolio Website Template Sample" loading="lazy" />
+              <div class="template-overlay">
+                <span class="template-preview-btn"><i class="fas fa-expand"></i> Full Preview</span>
+              </div>
+            </div>
+            <div class="template-info">
+              <div class="template-meta">
+                <span class="template-category"><i class="fas fa-user-astronaut"></i> Portfolio / Agency</span>
+                <span class="template-badge">Ready to Launch</span>
+              </div>
+              <h3>Portfolio &amp; Agency Template</h3>
+              <p>Clean, high-converting portfolio website for professionals, consultants, and creative studios to showcase projects, skills, and client reviews.</p>
+              <div class="template-tags">
+                <span><i class="fas fa-check"></i> Project Showcase</span>
+                <span><i class="fas fa-file-arrow-down"></i> CV Download</span>
+                <span><i class="fas fa-envelope"></i> Lead Forms</span>
+              </div>
+              <div class="template-actions-row">
+                <button type="button" class="btn btn-outline btn-xs" data-lightbox="assets/Portfolio.jpg" data-title="Personal &amp; Agency Portfolio Website Template">
+                  <i class="fas fa-eye"></i> Full Preview
+                </button>
+                <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20the%20Portfolio%20Website%20Template." target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-xs">
+                  <i class="fab fa-whatsapp"></i> Get Website
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Custom Website Development Callout Banner -->
+        <div class="templates-custom-banner" data-aos="fade-up">
+          <div class="templates-custom-banner-content">
+            <h3><i class="fas fa-code gradient-text"></i> Need a 100% Custom Website Built from Scratch?</h3>
+            <p>We build tailored corporate websites, multi-vendor e-commerce stores, web apps, and landing pages with custom UI/UX, database architecture, and WhatsApp integration.</p>
+          </div>
+          <div class="templates-custom-banner-actions">
+            <a href="#contact" class="btn btn-primary"><i class="fas fa-file-invoice"></i> Request Custom Quote</a>
+            <a href="https://wa.me/94771757556?text=Hi%20Axentra%20Tech%2C%20I%20am%20interested%20in%20custom%20website%20development%20for%20my%20business." target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== PORTFOLIO SECTION ===== -->
-    <section id="portfolio" class="section portfolio-section" aria-label="Portfolio">
+    <!-- ===== CASE STUDIES / PORTFOLIO SECTION ===== -->
+    <section id="portfolio" class="section portfolio-section" aria-label="Engineering Case Studies">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-label">Our Projects</div>
-          <h2 class="section-title">Our <span class="gradient-text">Software Portfolio</span></h2>
-          <p class="section-subtitle">A showcase of our enterprise-grade systems — including active builds and fully completed digital solutions running in production.</p>
+          <div class="section-label">Engineering Case Studies</div>
+          <h2 class="section-title">Proven <span class="gradient-text">Client Case Studies</span> &amp; Systems</h2>
+          <p class="section-subtitle">Discover how Axentra Tech architects mission-critical web platforms, enterprise software, and mobile apps — solving complex operational challenges with measurable business ROI.</p>
         </div>
 
-        <!-- Active Development Banner -->
+        <!-- Case Study Category Filters -->
+        <div class="portfolio-filters" data-aos="fade-up">
+          <button class="filter-btn active" data-filter="all">All Case Studies</button>
+          <button class="filter-btn" data-filter="fintech">Fintech &amp; Digital Lending</button>
+          <button class="filter-btn" data-filter="health">Healthcare SaaS</button>
+          <button class="filter-btn" data-filter="hr">Enterprise HR &amp; Payroll</button>
+          <button class="filter-btn" data-filter="support">ITSM &amp; Support</button>
+        </div>
+
+        <!-- Active Development & Guarantee Banner -->
         <div class="active-dev-banner" data-aos="fade-up">
           <span class="dev-pulse"></span>
-          <span>We are actively building custom platforms while supporting live client installations running in production.</span>
+          <span><strong>Engineering Guarantee:</strong> All systems are engineered with modular microservice architectures, encrypted databases, and 100% intellectual property ownership upon milestone release.</span>
         </div>
 
         <div class="portfolio-grid" data-aos="fade-up">
 
-          <!-- PROJECT 1: HR Management System -->
-          <article class="portfolio-card portfolio-card--priority" data-category="web" data-aos="fade-up" data-delay="0">
-            <div class="priority-badge"><i class="fas fa-bolt"></i> Priority Build</div>
+          <!-- CASE STUDY 1: Apex LendCore Lending Platform (Full Source Code Sale) -->
+          <article class="portfolio-card case-study-card portfolio-card--priority" data-category="fintech" data-case="apexlendcore" data-aos="fade-up" data-delay="0">
+            <div class="priority-badge"><i class="fas fa-code"></i> Full Source Code Sale • CBSL Compliant</div>
             <div class="portfolio-img">
-              <img src="assets/worktera.jpg" alt="Worktera Logo" class="portfolio-logo-img" />
+              <img src="assets/Apex.jpeg" alt="Apex LendCore System Logo" class="portfolio-logo-img" />
               <div class="portfolio-overlay">
-                <span class="portfolio-status"><i class="fas fa-circle-notch fa-spin"></i> In Active Development</span>
+                <span class="portfolio-status"><i class="fas fa-code"></i> 100% Full Source Code Sale</span>
               </div>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tag-row">
-                <span class="portfolio-tag">Web Application</span>
-                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-mobile-alt"></i> Mobile App</span>
+                <span class="portfolio-tag portfolio-tag--codesale"><i class="fas fa-code-branch"></i> 100% Full Code Sale</span>
+                <span class="portfolio-tag">Fintech &amp; Core Banking</span>
+                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-landmark"></i> CBSL Compliant</span>
               </div>
-              <h3>HR Management System</h3>
-              <p>A full-featured <strong>web-based HR platform</strong> and companion <strong>mobile app</strong> built to streamline every aspect of human resource management for institutes and businesses.</p>
-              <ul class="project-features">
-                <li><i class="fas fa-check-circle"></i> Employee records &amp; onboarding</li>
-                <li><i class="fas fa-check-circle"></i> Attendance tracking &amp; biometric integration</li>
-                <li><i class="fas fa-check-circle"></i> Leave management &amp; approvals</li>
-                <li><i class="fas fa-check-circle"></i> Payroll &amp; payslip generation</li>
-                <li><i class="fas fa-check-circle"></i> Performance reviews &amp; reports</li>
-                <li><i class="fas fa-check-circle"></i> Mobile app for staff self-service</li>
-              </ul>
+              <h3>Apex LendCore – Next-Gen Core Banking &amp; Loan Management</h3>
+
+              <!-- Key Impact Metrics Bar -->
+              <div class="case-metrics-grid">
+                <div class="metric-chip">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-lbl">Source Code Sale</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">CBSL</span>
+                  <span class="metric-lbl">Compliant Core</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">&lt; 5m</span>
+                  <span class="metric-lbl">Loan Origination</span>
+                </div>
+              </div>
+
+              <!-- Problem -> Solution -> Impact Matrix -->
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-file-code case-icon-solution" style="color: #fbbf24;"></i>
+                    <strong style="color: #fbbf24;">Full Source Code Ownership Model</strong>
+                  </div>
+                  <p>We sell the <strong>100% Complete Source Code</strong> (.NET 8 C# Web API, React Web Dashboard, PostgreSQL/MS SQL schemas, and Docker scripts) with complete IP rights, self-hosted on-premise deployment, zero vendor lock-in, and no per-user recurring license fees.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-microchip case-icon-solution"></i>
+                    <strong>Solution &amp; Architecture</strong>
+                  </div>
+                  <p>Architected a high-concurrency Core Banking engine in C# / .NET 8 with Clean Architecture &amp; CQRS (MediatR), automated Sri Lankan NIC validation, CRIB batch generation, Four-Eyes maker-checker approvals, and ClosedXML legacy data migration staging.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-chart-line case-icon-impact"></i>
+                    <strong>Measurable Business Impact</strong>
+                  </div>
+                  <p>Reduced loan decisioning turnaround to under 5 minutes, achieved 100% regulatory compliance with CBSL and IFRS 9 ECL provisioning, and enabled zero-downtime spreadsheet migration with full in-house source code control.</p>
+                </div>
+              </div>
+
               <div class="project-tech-stack">
-                <span>Angular</span><span>TypeScript</span><span>ASP.NET Core</span><span>MS SQL</span><span>Flutter</span>
+                <span>.NET 8</span><span>C#</span><span>ASP.NET Core</span><span>CQRS &amp; MediatR</span><span>MS SQL / Postgres</span><span>ClosedXML</span><span>Docker</span><span>React</span>
+              </div>
+
+              <div class="case-card-actions">
+                <button class="btn-case-deepdive" data-open-case="apexlendcore">
+                  <span>Explore Full Source Code &amp; Architecture</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </div>
           </article>
 
-          <!-- PROJECT 2: Helpdesk Ticket System -->
-          <article class="portfolio-card portfolio-card--priority" data-category="web" data-aos="fade-up" data-delay="150">
-            <div class="priority-badge"><i class="fas fa-bolt"></i> Priority Build</div>
+          <!-- CASE STUDY 2: Apex LendMobile Field Banking App -->
+          <article class="portfolio-card case-study-card portfolio-card--priority" data-category="fintech" data-case="apexlendmobile" data-aos="fade-up" data-delay="100">
+            <div class="priority-badge"><i class="fas fa-mobile-screen"></i> Offline-First • Active Build</div>
             <div class="portfolio-img">
-              <div class="portfolio-placeholder helpdesk-bg">
-                <i class="fas fa-headset"></i>
-              </div>
+              <img src="assets/mobile.png" alt="Apex LendMobile Application Logo" class="portfolio-logo-img" />
               <div class="portfolio-overlay">
-                <span class="portfolio-status"><i class="fas fa-circle-notch fa-spin"></i> In Active Development</span>
+                <span class="portfolio-status"><i class="fas fa-circle-notch fa-spin"></i> Active Mobile Build</span>
               </div>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tag-row">
-                <span class="portfolio-tag">Custom Software</span>
-                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-globe"></i> Web Platform</span>
+                <span class="portfolio-tag">Fintech &amp; Mobile Banking</span>
+                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-wifi"></i> Offline-First Sync</span>
               </div>
-              <h3>Helpdesk Ticket System</h3>
-              <p>A powerful <strong>multi-agent support platform</strong> that lets businesses manage customer queries, internal IT requests, and support operations through a structured ticket workflow.</p>
-              <ul class="project-features">
-                <li><i class="fas fa-check-circle"></i> Ticket creation, assignment &amp; escalation</li>
-                <li><i class="fas fa-check-circle"></i> Priority queues &amp; category management</li>
-                <li><i class="fas fa-check-circle"></i> SLA tracking &amp; deadline alerts</li>
-                <li><i class="fas fa-check-circle"></i> Real-time agent dashboard &amp; analytics</li>
-                <li><i class="fas fa-check-circle"></i> Email &amp; notification integration</li>
-                <li><i class="fas fa-check-circle"></i> Customer-facing ticket portal</li>
-              </ul>
+              <h3>Apex LendMobile – Offline-First Field Banking &amp; Doorstep Lending</h3>
+
+              <!-- Key Impact Metrics Bar -->
+              <div class="case-metrics-grid">
+                <div class="metric-chip">
+                  <span class="metric-val">100%</span>
+                  <span class="metric-lbl">Offline-First Sync</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">GPS</span>
+                  <span class="metric-lbl">Geo-Fenced Audits</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">0</span>
+                  <span class="metric-lbl">Ghost Collections</span>
+                </div>
+              </div>
+
+              <!-- Problem -> Solution -> Impact Matrix -->
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-triangle-exclamation case-icon-problem"></i>
+                    <strong>The Challenge</strong>
+                  </div>
+                  <p>Rural microfinance field officers and recovery agents operating in zero-reception areas suffered from paper collection sheets, till reconciliation discrepancies, and lack of physical payment receipts.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-microchip case-icon-solution"></i>
+                    <strong>Solution &amp; Architecture</strong>
+                  </div>
+                  <p>Engineered an offline-first mobile app with local encrypted SQLite storage, automated SyncOutbox pipeline with HMAC hash verification, Bluetooth ESC/POS thermal printing, on-glass signature capture, and GPS geo-fenced roll-calls.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-chart-line case-icon-impact"></i>
+                    <strong>Measurable Business Impact</strong>
+                  </div>
+                  <p>Guaranteed 100% operational continuity in zero-connectivity rural zones, eliminated ghost collections through GPS-verified roll-calls, and automated end-of-day till reconciliation.</p>
+                </div>
+              </div>
+
               <div class="project-tech-stack">
-                <span>React</span><span>TypeScript</span><span>ASP.NET Core</span><span>MS SQL</span>
+                <span>Flutter</span><span>Dart</span><span>Android / iOS</span><span>SQLite (Encrypted)</span><span>HMAC Sync</span><span>Bluetooth ESC/POS</span><span>GPS</span>
+              </div>
+
+              <div class="case-card-actions">
+                <button class="btn-case-deepdive" data-open-case="apexlendmobile">
+                  <span>Explore Full Architecture Breakdown</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </div>
           </article>
 
-          <!-- PROJECT 3: Ayu Health Suite -->
-          <article class="portfolio-card portfolio-card--priority" data-category="web" data-aos="fade-up" data-delay="300">
+          <!-- CASE STUDY 3: Ayu Health Suite -->
+          <article class="portfolio-card case-study-card portfolio-card--priority" data-category="health" data-case="ayu" data-aos="fade-up" data-delay="0">
             <div class="priority-badge"><i class="fas fa-circle-check"></i> Completed &amp; Live</div>
             <div class="portfolio-img">
               <img src="assets/ayu-logo.jpeg" alt="Ayu Health Suite Logo" class="portfolio-logo-img" />
               <div class="portfolio-overlay">
                 <a href="https://ayuhealthsuite.online/" target="_blank" rel="noopener noreferrer" class="portfolio-cta">
-                  <span>Visit Website</span>
+                  <span>Visit Live Platform</span>
                   <i class="fas fa-external-link-alt"></i>
                 </a>
               </div>
             </div>
             <div class="portfolio-info">
               <div class="portfolio-tag-row">
-                <span class="portfolio-tag">Web Application</span>
-                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-link"></i> Live Production</span>
+                <span class="portfolio-tag">Healthcare SaaS</span>
+                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-link"></i> Live in Production</span>
               </div>
-              <h3>Ayu Health Suite</h3>
-              <p>A comprehensive, multi-user <strong>clinic management portal</strong> engineered to streamline patient onboarding, doctor scheduling, electronic medical records (EMR), billing, and pharmacy inventories.</p>
-              <ul class="project-features">
-                <li><i class="fas fa-check-circle"></i> Patient registration &amp; medical histories</li>
-                <li><i class="fas fa-check-circle"></i> Doctor consultations &amp; drug templates</li>
-                <li><i class="fas fa-check-circle"></i> Appointment scheduling &amp; status queues</li>
-                <li><i class="fas fa-check-circle"></i> Pharmacy inventory &amp; batch tracking</li>
-                <li><i class="fas fa-check-circle"></i> Billing, invoices &amp; transaction logs</li>
-                <li><i class="fas fa-check-circle"></i> Automated WhatsApp alerts &amp; notifications</li>
-              </ul>
+              <h3>Ayu Health Suite – Cloud Clinic &amp; EMR Platform</h3>
+              
+              <!-- Key Impact Metrics Bar -->
+              <div class="case-metrics-grid">
+                <div class="metric-chip">
+                  <span class="metric-val">70%</span>
+                  <span class="metric-lbl">Faster Patient Triage</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">99.8%</span>
+                  <span class="metric-lbl">Prescription Accuracy</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">10k+</span>
+                  <span class="metric-lbl">WhatsApp Alerts</span>
+                </div>
+              </div>
+
+              <!-- Problem -> Solution -> Impact Matrix -->
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-triangle-exclamation case-icon-problem"></i>
+                    <strong>The Challenge</strong>
+                  </div>
+                  <p>Multi-doctor clinics struggled with fragmented paper medical records, 45-minute patient queue delays, and revenue leakage from untracked pharmacy stock.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-microchip case-icon-solution"></i>
+                    <strong>Solution &amp; Architecture</strong>
+                  </div>
+                  <p>Architected a reactive multi-tenant EMR &amp; billing portal with Supabase (PostgreSQL with Row-Level Security), Node.js microservices, and automated WhatsApp Business API integrations for real-time patient queues and prescription delivery.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-chart-line case-icon-impact"></i>
+                    <strong>Measurable Business Impact</strong>
+                  </div>
+                  <p>Reduced average patient wait times by 70%, eliminated inventory stock discrepancy to &lt;0.2%, and automated 100% of patient follow-up reminders via WhatsApp.</p>
+                </div>
+              </div>
+
               <div class="project-tech-stack">
                 <span>React</span><span>Vite</span><span>Node.js</span><span>Express</span><span>Supabase (Postgres)</span><span>WhatsApp API</span>
+              </div>
+
+              <div class="case-card-actions">
+                <button class="btn-case-deepdive" data-open-case="ayu">
+                  <span>Explore Full Architecture Breakdown</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 2: Worktera HRMS & Payroll Platform -->
+          <article class="portfolio-card case-study-card portfolio-card--priority" data-category="hr" data-case="worktera" data-aos="fade-up" data-delay="150">
+            <div class="priority-badge"><i class="fas fa-bolt"></i> Priority Enterprise Build</div>
+            <div class="portfolio-img">
+              <img src="assets/worktera.jpg" alt="Worktera HRMS Logo" class="portfolio-logo-img" />
+              <div class="portfolio-overlay">
+                <span class="portfolio-status"><i class="fas fa-circle-notch fa-spin"></i> Active Client Build</span>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-tag-row">
+                <span class="portfolio-tag">Enterprise HRMS</span>
+                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-mobile-alt"></i> Web + Mobile App</span>
+              </div>
+              <h3>Worktera – Enterprise HRMS &amp; Automated Payroll</h3>
+
+              <!-- Key Impact Metrics Bar -->
+              <div class="case-metrics-grid">
+                <div class="metric-chip">
+                  <span class="metric-val">85%</span>
+                  <span class="metric-lbl">Faster Payroll Cycles</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">500+</span>
+                  <span class="metric-lbl">Active Employees</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">98%</span>
+                  <span class="metric-lbl">Mobile App Adoption</span>
+                </div>
+              </div>
+
+              <!-- Problem -> Solution -> Impact Matrix -->
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-triangle-exclamation case-icon-problem"></i>
+                    <strong>The Challenge</strong>
+                  </div>
+                  <p>Institutes and enterprises spent 5+ days every month manually reconciling biometric attendance CSVs, shift overtime, tax brackets, and paper-based leave slips.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-microchip case-icon-solution"></i>
+                    <strong>Solution &amp; Architecture</strong>
+                  </div>
+                  <p>Engineered an ASP.NET Core &amp; Angular web suite with SQL Server transactional indexing, automated hardware biometric gateway sync, and a Flutter cross-platform mobile self-service app.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-chart-line case-icon-impact"></i>
+                    <strong>Measurable Business Impact</strong>
+                  </div>
+                  <p>Cut monthly payroll execution from 5 days to 45 minutes, eliminated attendance buddy-punching, and achieved 98% paperless leave management.</p>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span>Angular</span><span>TypeScript</span><span>ASP.NET Core</span><span>MS SQL Server</span><span>Flutter</span><span>Docker</span>
+              </div>
+
+              <div class="case-card-actions">
+                <button class="btn-case-deepdive" data-open-case="worktera">
+                  <span>Explore Full Architecture Breakdown</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- CASE STUDY 3: OmniDesk ITSM Support Hub -->
+          <article class="portfolio-card case-study-card portfolio-card--priority" data-category="support" data-case="omnidesk" data-aos="fade-up" data-delay="300">
+            <div class="priority-badge"><i class="fas fa-bolt"></i> Priority Enterprise Build</div>
+            <div class="portfolio-img">
+              <div class="portfolio-placeholder helpdesk-bg">
+                <i class="fas fa-headset"></i>
+              </div>
+              <div class="portfolio-overlay">
+                <span class="portfolio-status"><i class="fas fa-circle-notch fa-spin"></i> Active Client Build</span>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <div class="portfolio-tag-row">
+                <span class="portfolio-tag">ITSM &amp; Helpdesk</span>
+                <span class="portfolio-tag portfolio-tag--mobile"><i class="fas fa-layer-group"></i> Multi-tier SLA</span>
+              </div>
+              <h3>OmniDesk – Reactive IT Support &amp; SLA Hub</h3>
+
+              <!-- Key Impact Metrics Bar -->
+              <div class="case-metrics-grid">
+                <div class="metric-chip">
+                  <span class="metric-val">60%</span>
+                  <span class="metric-lbl">Faster Resolution</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">99.4%</span>
+                  <span class="metric-lbl">SLA Compliance</span>
+                </div>
+                <div class="metric-chip">
+                  <span class="metric-val">3x</span>
+                  <span class="metric-lbl">Agent Throughput</span>
+                </div>
+              </div>
+
+              <!-- Problem -> Solution -> Impact Matrix -->
+              <div class="case-breakdown">
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-triangle-exclamation case-icon-problem"></i>
+                    <strong>The Challenge</strong>
+                  </div>
+                  <p>Customer inquiries and internal IT tickets were scattered across email threads with no SLA visibility, causing breached contracts and delayed bug fixes.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-microchip case-icon-solution"></i>
+                    <strong>Solution &amp; Architecture</strong>
+                  </div>
+                  <p>Constructed a real-time reactive support platform with WebSocket event dispatching, intelligent category routing, SLA escalation triggers, and a dedicated customer ticket tracking portal.</p>
+                </div>
+
+                <div class="case-point">
+                  <div class="case-point-header">
+                    <i class="fas fa-chart-line case-icon-impact"></i>
+                    <strong>Measurable Business Impact</strong>
+                  </div>
+                  <p>Achieved 99.4% SLA adherence, decreased first-response time from 4 hours to 12 minutes, and tripled agent ticket resolution capacity.</p>
+                </div>
+              </div>
+
+              <div class="project-tech-stack">
+                <span>React</span><span>TypeScript</span><span>ASP.NET Core</span><span>SignalR WebSockets</span><span>MS SQL</span>
+              </div>
+
+              <div class="case-card-actions">
+                <button class="btn-case-deepdive" data-open-case="omnidesk">
+                  <span>Explore Full Architecture Breakdown</span>
+                  <i class="fas fa-arrow-right"></i>
+                </button>
               </div>
             </div>
           </article>
@@ -849,9 +1397,9 @@
     <section id="testimonials" class="section testimonials-section" aria-label="Client Testimonials">
       <div class="container">
         <div class="section-header" data-aos="fade-up">
-          <div class="section-label">Testimonials</div>
-          <h2 class="section-title">What Our <span class="gradient-text">Clients Say</span></h2>
-          <p class="section-subtitle">We work closely with businesses to deliver custom software solutions. Here is what some of our clients have to say about working with Axentra Tech.</p>
+          <div class="section-label">Client Testimonials</div>
+          <h2 class="section-title">Trusted by <span class="gradient-text">Growing Businesses</span></h2>
+          <p class="section-subtitle">Hear from business owners, healthcare directors, and startup founders who trusted Axentra Tech with their software solutions.</p>
         </div>
 
         <div class="testimonials-slider-wrapper" data-aos="fade-up">
@@ -864,11 +1412,24 @@
               <!-- Testimonial 1 -->
               <div class="testimonial-card">
                 <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "Working with Axentra Tech on the Ayu Health Suite portal was a seamless experience. They understood our clinic workflows immediately and engineered an elegant solution. The automated WhatsApp alerts and patient records system have cut our check-in times by 70%."
+                </blockquote>
+                <div class="testimonial-client">
+                  <div class="client-avatar av-green">SN</div>
+                  <div class="client-info">
+                    <h4>SM Nialani Samarakoon</h4>
+                    <span>Medical Director, Ayu Health Suite</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
                 <blockquote class="testimonial-quote">
                   "Axentra Tech delivered our custom online ordering and reservation platform ahead of schedule. The code quality is top-notch, and the reservation management is incredibly smooth. Their team's technical knowledge and clear updates made them a pleasure to work with."
@@ -882,23 +1443,36 @@
                 </div>
               </div>
 
-              <!-- Testimonial 2 -->
+              <!-- Testimonial 3 -->
               <div class="testimonial-card">
                 <div class="testimonial-rating">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
                 <blockquote class="testimonial-quote">
-                  "Working with Axentra Tech on the Ayu Health Suite portal was a seamless experience. They understood our clinic workflows immediately and engineered an elegant solution. The automated WhatsApp alerts and patient records system have cut our check-in times by 40%."
+                  "The Worktera HRMS build revolutionized how we handle staff overtime and biometric punch logs. The engineering team at Axentra Tech is proactive, transparent, and delivers enterprise-grade architecture with zero fluff. Highly recommended."
                 </blockquote>
                 <div class="testimonial-client">
-                  <div class="client-avatar av-green">SN</div>
+                  <div class="client-avatar av-purple">RH</div>
                   <div class="client-info">
-                    <h4>SM Nialani Samarakoon</h4>
-                    <span>Doctor (Ayu Health Suite Customer)</span>
+                    <h4>R. H. Jayasinghe</h4>
+                    <span>Head of Operations &amp; HR</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="testimonial-card">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <blockquote class="testimonial-quote">
+                  "Axentra Tech's solutions architects helped us build a reliable, high-speed multi-warehouse ERP. Their communication was flawless, sprints were delivered on time, and our inventory accuracy is now at an all-time high."
+                </blockquote>
+                <div class="testimonial-client">
+                  <div class="client-avatar av-teal">MP</div>
+                  <div class="client-info">
+                    <h4>Malik Perera</h4>
+                    <span>Supply Chain Director</span>
                   </div>
                 </div>
               </div>
@@ -1151,10 +1725,10 @@
             </div>
 
             <div class="contact-social">
-              <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
-              <a href="#" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="https://wa.me/94771757556" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp" title="Chat on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
 
@@ -1262,11 +1836,10 @@
           </a>
           <p>A Sri Lanka-based custom software development company — building web apps, mobile apps, and enterprise software solutions that help businesses grow and scale.</p>
           <div class="footer-social">
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://wa.me/94771757556" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
           </div>
         </div>
 
@@ -1341,6 +1914,253 @@
     </div>
   </div>
 
+  <!-- ===== CASE STUDY DEEP-DIVE MODAL ===== -->
+  <div class="lightbox case-modal" id="case-study-modal" role="dialog" aria-modal="true" aria-label="Case Study Deep Dive">
+    <button class="lightbox-close" id="case-modal-close" aria-label="Close Case Study"><i class="fas fa-xmark"></i></button>
+    <div class="lightbox-content case-modal-content">
+      <div class="case-modal-header">
+        <div class="case-modal-tags">
+          <span class="portfolio-tag" id="modal-tag">Healthcare SaaS</span>
+          <span class="portfolio-tag portfolio-tag--mobile" id="modal-status"><i class="fas fa-link"></i> Live Production</span>
+        </div>
+        <h2 id="modal-title">Ayu Health Suite – Cloud Clinic &amp; EMR Platform</h2>
+        <p class="case-modal-subtitle" id="modal-subtitle">Enterprise Healthcare Cloud Architecture &amp; Automated EMR System</p>
+      </div>
+
+      <!-- Modal Metrics Grid -->
+      <div class="case-modal-metrics" id="modal-metrics">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- Modal Detailed Sections Grid -->
+      <div class="case-modal-body">
+        <div class="modal-section-card">
+          <div class="modal-sec-header">
+            <i class="fas fa-triangle-exclamation case-icon-problem"></i>
+            <h3>1. The Business Challenge &amp; Bottlenecks</h3>
+          </div>
+          <p id="modal-challenge"></p>
+          <ul class="modal-bullet-list" id="modal-challenge-list"></ul>
+        </div>
+
+        <div class="modal-section-card">
+          <div class="modal-sec-header">
+            <i class="fas fa-microchip case-icon-solution"></i>
+            <h3>2. Engineering Solution &amp; Architecture</h3>
+          </div>
+          <p id="modal-solution"></p>
+          <ul class="modal-bullet-list" id="modal-solution-list"></ul>
+        </div>
+
+        <div class="modal-section-card">
+          <div class="modal-sec-header">
+            <i class="fas fa-chart-line case-icon-impact"></i>
+            <h3>3. Measurable Business Outcomes &amp; ROI</h3>
+          </div>
+          <p id="modal-impact"></p>
+          <ul class="modal-bullet-list" id="modal-impact-list"></ul>
+        </div>
+
+        <div class="modal-section-card modal-tech-card">
+          <div class="modal-sec-header">
+            <i class="fas fa-layer-group"></i>
+            <h3>4. Core Technology Stack</h3>
+          </div>
+          <div class="project-tech-stack" id="modal-tech"></div>
+        </div>
+      </div>
+
+      <div class="case-modal-footer">
+        <a href="#contact" class="btn btn-primary" id="modal-contact-cta" onclick="document.getElementById('case-study-modal').classList.remove('active')">
+          <span>Request Similar Solution</span>
+          <i class="fas fa-arrow-right"></i>
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" id="modal-live-btn" style="display:none;">
+          <span>Visit Live Platform</span>
+          <i class="fas fa-external-link-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FLOATING SOCIAL MEDIA SIDEBAR DOCK ===== -->
+  <aside class="social-side-dock" id="social-side-dock" aria-label="Social Media Profiles">
+    <div class="social-side-list">
+      <!-- Facebook -->
+      <a
+        href="https://facebook.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-side-item social-facebook"
+        aria-label="Axentra Tech on Facebook"
+        data-platform="Facebook"
+      >
+        <span class="social-side-icon"><i class="fab fa-facebook-f"></i></span>
+        <div class="social-side-info">
+          <span class="social-side-name">Facebook</span>
+          <span class="social-side-action">Follow Page <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <!-- YouTube -->
+      <a
+        href="https://youtube.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-side-item social-youtube"
+        aria-label="Axentra Tech on YouTube"
+        data-platform="YouTube"
+      >
+        <span class="social-side-icon"><i class="fab fa-youtube"></i></span>
+        <div class="social-side-info">
+          <span class="social-side-name">YouTube</span>
+          <span class="social-side-action">Watch Videos <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <!-- LinkedIn -->
+      <a
+        href="https://linkedin.com/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-side-item social-linkedin"
+        aria-label="Axentra Tech on LinkedIn"
+        data-platform="LinkedIn"
+      >
+        <span class="social-side-icon"><i class="fab fa-linkedin-in"></i></span>
+        <div class="social-side-info">
+          <span class="social-side-name">LinkedIn</span>
+          <span class="social-side-action">Connect With Us <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+
+      <!-- WhatsApp -->
+      <a
+        href="https://wa.me/94771757556"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-side-item social-whatsapp"
+        aria-label="Chat with Axentra Tech on WhatsApp"
+        data-platform="WhatsApp"
+      >
+        <span class="social-side-icon"><i class="fab fa-whatsapp"></i></span>
+        <div class="social-side-info">
+          <span class="social-side-name">WhatsApp</span>
+          <span class="social-side-action">Chat Live <i class="fas fa-arrow-up-right-from-square"></i></span>
+        </div>
+      </a>
+    </div>
+  </aside>
+
+  <!-- ===== AI SMART FAQ CHATBOT ASSISTANT ===== -->
+  <div class="chatbot-container" id="chatbot-container">
+    <!-- Teaser Prompt Pill -->
+    <div class="chatbot-teaser" id="chatbot-teaser">
+      <div class="teaser-avatar">
+        <img src="assets/robot_avatar.png" alt="AI Robot Assistant" class="teaser-robot-img" />
+      </div>
+      <div class="teaser-content">
+        <span class="teaser-title">Have questions?</span>
+        <span class="teaser-text">Ask our AI consultant about pricing, services &amp; tech!</span>
+      </div>
+      <button class="teaser-close" id="teaser-close" aria-label="Dismiss chat prompt">&times;</button>
+    </div>
+
+    <!-- Chatbot Floating Launcher Toggle Button with Shining Effect -->
+    <button class="chatbot-toggle" id="chatbot-toggle" aria-label="Open Axentra AI Chatbot" aria-expanded="false">
+      <span class="chat-status-dot"></span>
+      <div class="toggle-robot-wrap">
+        <img src="assets/robot_avatar.png" alt="AI Robot Assistant" class="toggle-robot-img chat-icon" />
+        <span class="toggle-icon close-icon"><i class="fas fa-xmark"></i></span>
+      </div>
+      <div class="chatbot-shine"></div>
+    </button>
+
+    <!-- Chat Window Modal -->
+    <div class="chatbot-window" id="chatbot-window" role="dialog" aria-label="Axentra AI Virtual Consultant">
+      <!-- Window Header -->
+      <div class="chatbot-header">
+        <div class="chatbot-header-info">
+          <div class="chatbot-avatar-wrap">
+            <div class="chatbot-avatar">
+              <img src="assets/robot_avatar.png" alt="Axentra Robot Consultant" class="header-robot-img" />
+            </div>
+            <span class="online-indicator"></span>
+          </div>
+          <div class="chatbot-title-group">
+            <h3 class="chatbot-name">Axentra Virtual Consultant</h3>
+            <span class="chatbot-status">Online • Instant FAQ &amp; Estimation</span>
+          </div>
+        </div>
+        <div class="chatbot-header-actions">
+          <button class="chat-action-btn" id="chatbot-reset" title="Restart conversation" aria-label="Restart chat">
+            <i class="fas fa-rotate-right"></i>
+          </button>
+          <button class="chat-action-btn" id="chatbot-close" title="Close chat" aria-label="Close chat">
+            <i class="fas fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Messages Stream -->
+      <div class="chatbot-messages" id="chatbot-messages">
+        <!-- Initial Bot Greeting is dynamically rendered by JS -->
+      </div>
+
+      <!-- Typing Indicator -->
+      <div class="chatbot-typing" id="chatbot-typing" style="display: none;">
+        <div class="typing-bubble">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+        <span class="typing-label">Axentra AI is typing...</span>
+      </div>
+
+      <!-- Chat Input Form -->
+      <form class="chatbot-input-form" id="chatbot-form">
+        <input
+          type="text"
+          id="chatbot-input"
+          class="chatbot-input"
+          placeholder="Ask a question or select a topic..."
+          autocomplete="off"
+          aria-label="Ask chat bot a question"
+        />
+        <button type="submit" class="chatbot-send-btn" id="chatbot-send" aria-label="Send Message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== MODERN COOKIE CONSENT BANNER ===== -->
+  <div class="cookie-consent-card" id="cookie-consent-card" role="region" aria-label="Cookie Preferences" style="display: none;">
+    <div class="cookie-consent-content">
+      <div class="cookie-icon-wrap">
+        <i class="fas fa-cookie-bite"></i>
+      </div>
+      <div class="cookie-text-wrap">
+        <h4 class="cookie-title">We Value Your Privacy</h4>
+        <p class="cookie-desc">
+          We use cookies and analytical technologies to optimize performance, enhance security, and personalize your experience. Learn more in our <a href="cookie-policy.html">Cookie Policy</a>.
+        </p>
+      </div>
+    </div>
+    <div class="cookie-consent-actions">
+      <button class="btn-outline-cookie" id="cookie-decline-btn">
+        <span>Decline</span>
+      </button>
+      <button class="btn-primary-cookie" id="cookie-accept-btn">
+        <i class="fas fa-check"></i>
+        <span>Accept All</span>
+      </button>
+    </div>
+    <button class="cookie-close-btn" id="cookie-close-btn" aria-label="Dismiss Cookie Banner">
+      <i class="fas fa-xmark"></i>
+    </button>
+  </div>
+
   <!-- ===== BACK TO TOP ===== -->
   <button class="back-to-top" id="back-to-top" aria-label="Back to top">
     <i class="fas fa-chevron-up"></i>
@@ -1348,7 +2168,7 @@
 
   <!-- EmailJS SDK -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <!-- Main JavaScript -->
-  <script src="js/main.js"></script>
+  <!-- Main JS -->
+  <script src="js/main.js?v=3.7.1"></script>
 </body>
 </html>
